@@ -16,7 +16,7 @@ function NavBar() {
   const [toggle, setToggle] = useState(true);
   const [inputValue, setInputValue] = useState("");
   return (
-    <Container.Provider value={{ toggle }}>
+    <Container.Provider value={{ toggle, inputValue }}>
       <Fragment>
         <nav className={toggle ? "" : "navBarColor"}>
           <div className="nav-options">
@@ -55,7 +55,11 @@ function NavBar() {
             </NavLink>
           </div>
           <div className="input-group">
-            <input type="text" placeholder="Search Whatever you want" />
+            <input
+              type="text"
+              placeholder="Search Whatever you want"
+              onChange={(e) => setInputValue(e.target.value)}
+            />
             <AiOutlineSearch fontSize={21} color="green" id="search" />
             <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
               <div
@@ -64,6 +68,7 @@ function NavBar() {
             </div>
           </div>
         </nav>
+
         <Routes>
           <Route path="" element={<Movies />} />
           <Route path="TvShows" element={<TvShows />} />

@@ -6,17 +6,20 @@ import noImage from "./no-image.jpg";
 import { Container } from "./NavBar";
 
 const Movies = () => {
-  const Api = "https://api.themoviedb.org/3/discover/movie";
-  const Images = "https://image.tmdb.org/t/p/w500/";
-
   const [moviesData, setMoviesData] = useState([]);
   const [trailer, setTrailer] = useState(true);
-  const { toggle } = useContext(Container);
+  const { toggle, inputValue } = useContext(Container);
+
+  const input = inputValue;
+  const Shown = input ? "search" : "discover";
+  const Api = `https://api.themoviedb.org/3/${Shown}/movie`;
+  const Images = "https://image.tmdb.org/t/p/w500/";
 
   const MovieCall = async () => {
     const data = await axios.get(Api, {
       params: {
         api_key: "0f898ec93930a149724e4e4c3c310af8",
+        query: input,
       },
     });
     // To know our API key work or not .. console.log(data.data.results);
@@ -25,7 +28,7 @@ const Movies = () => {
   };
   useEffect(() => {
     MovieCall();
-  }, []); // Empty parameter to Run once the MovieCall function, to optimize the penformance ...
+  }, [input]); // Update by (every input) if Empty parameter to Run once the MovieCall function, to optimize the penformance ...
   console.log(moviesData);
   return (
     <Fragment>
