@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Fragment } from "react";
 
 const Movies = () => {
   return (
-    <div>Movies</div>
-  )
-}
+    <Fragment>
+      <div>Movies</div>
+    </Fragment>
+  );
+};
 
-export default Movies
+export default Movies;

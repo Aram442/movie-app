@@ -14,7 +14,7 @@ nav a {
   text-decoration: none;
 }
 nav span {
-  color: #ee9b00;
+  /* color: #ee9b00; */
   cursor: pointer;
   margin-left: 40px;
   font-size: 0.85rem;
