@@ -81,7 +81,7 @@ const Movies = () => {
             cursor={"pointer"}
             onClick={(trailer) => setTrailer(true)}
           />
-          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} />}
+          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} toggle={toggle}/>}
         </div>
       </div>
     </Fragment>

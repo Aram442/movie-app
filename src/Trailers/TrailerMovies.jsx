@@ -3,7 +3,7 @@ import ReactPlayer from "react-player";
 import movieTrailer from "movie-trailer";
 import "../Styles/TrailerMovie.css";
 
-function TrailerMovies({ movieTitle }) {
+function TrailerMovies({ movieTitle, toggle }) {
   const [video, setVideo] = useState("");
   const [videoURL, setVideoURL] = useState("");
 
@@ -22,6 +22,9 @@ function TrailerMovies({ movieTitle }) {
     <Fragment>
       <div className="Container"></div>
       <div className="player">
+        <h1 id={toggle ? "TrailerMovie-name-dark" : "TrailerMovie-name-light"}>
+          {movieTitle}
+        </h1>
         <ReactPlayer
           url={videoURL}
           controls={true}

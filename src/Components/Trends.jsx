@@ -78,7 +78,11 @@ function Trends() {
             cursor={"pointer"}
             onClick={(trailer) => setTrailer(true)}
           />
-          {trailer ? console.log : <TrailerTreding TrendingTitle={trendTitle} />}
+          {trailer ? (
+            console.log
+          ) : (
+            <TrailerTreding TrendingTitle={trendTitle} toggle={toggle} />
+          )}
         </div>
       </div>
     </Fragment>
