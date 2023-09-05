@@ -29,7 +29,9 @@ const Movies = () => {
     setMoviesData(results);
   };
   useEffect(() => {
-    MovieCall();
+    setTimeout(() => {
+      MovieCall();
+    }, 100);
   }, [input]); // Update by (every input) if Empty parameter to Run once the MovieCall function, to optimize the penformance ...
   console.log(moviesData);
 
@@ -70,16 +72,16 @@ const Movies = () => {
               </Fragment>
             );
           })}
+          <AiOutlineClose
+            id={trailer ? "Nothing" : "Exit1"}
+            className={toggle ? "DarkTheme" : "LightThemeClose"}
+            fontSize={55}
+            color="fff"
+            cursor={"pointer"}
+            onClick={(trailer) => setTrailer(true)}
+          />
         </div>
       </div>
-      <AiOutlineClose
-        id={trailer ? "Nothing" : "Exit1"}
-        className={toggle ? "DarkTheme" : "LightThemeClose"}
-        fontSize={55}
-        color="fff"
-        cursor={"pointer"}
-        onClick={(trailer) => setTrailer(true)}
-      />
     </Fragment>
   );
 };
