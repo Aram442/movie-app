@@ -72,7 +72,7 @@ const Movies = () => {
               </Fragment>
             );
           })}
-          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} />}
+
           <AiOutlineClose
             id={trailer ? "Nothing" : "Exit1"}
             className={toggle ? "DarkTheme" : "LightThemeClose"}
@@ -81,6 +81,7 @@ const Movies = () => {
             cursor={"pointer"}
             onClick={(trailer) => setTrailer(true)}
           />
+          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} />}
         </div>
       </div>
     </Fragment>

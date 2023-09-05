@@ -3,6 +3,7 @@ import { Container } from "./NavBar";
 import axios from "axios";
 import { AiOutlineClose, AiFillPlayCircle } from "react-icons/ai";
 import noImage from "./no-image.jpg";
+import TrailerTreding from "../Trailers/TrailerTrending";
 
 function Trends() {
   const Api = "https://api.themoviedb.org/3";
@@ -77,6 +78,7 @@ function Trends() {
             cursor={"pointer"}
             onClick={(trailer) => setTrailer(true)}
           />
+          {trailer ? console.log : <TrailerTreding TrendingTitle={trendTitle} />}
         </div>
       </div>
     </Fragment>
