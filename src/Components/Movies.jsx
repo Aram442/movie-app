@@ -5,14 +5,14 @@ import { AiFillPlayCircle } from "react-icons/ai";
 import { AiOutlineClose } from "react-icons/ai";
 import noImage from "./no-image.jpg";
 import { Container } from "./NavBar";
+import TrailerMovies from "../Trailers/TrailerMovies";
 
 const Movies = () => {
+  const { toggle, inputValue } = useContext(Container);
+  const input = inputValue;
   const [moviesData, setMoviesData] = useState([]);
   const [trailer, setTrailer] = useState(true);
-  const { toggle, inputValue } = useContext(Container);
   const [movieTitle, setMovieTitle] = useState("");
-
-  const input = inputValue;
   const Shown = input ? "search" : "discover";
   const Api = `https://api.themoviedb.org/3/${Shown}/movie`;
   const Images = "https://image.tmdb.org/t/p/w500/";
@@ -72,6 +72,7 @@ const Movies = () => {
               </Fragment>
             );
           })}
+          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} />}
           <AiOutlineClose
             id={trailer ? "Nothing" : "Exit1"}
             className={toggle ? "DarkTheme" : "LightThemeClose"}
