@@ -8,7 +8,7 @@ function TrailerMovies({ movieTitle }) {
   const [videoURL, setVideoURL] = useState("");
 
   function handleSearch() {
-    setVideoURL(movieTitle);
+    setVideo(movieTitle);
     movieTrailer(video).then((res) => {
       setVideoURL(res);
     });
@@ -17,12 +17,13 @@ function TrailerMovies({ movieTitle }) {
   useEffect(() => {
     handleSearch();
   }, [videoURL]);
+
   return (
     <Fragment>
       <div className="Container"></div>
       <div className="player">
         <ReactPlayer
-          rul={videoURL}
+          url={videoURL}
           controls={true}
           width={"1000px"}
           height={"700px"}

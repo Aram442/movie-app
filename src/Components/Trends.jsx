@@ -26,7 +26,9 @@ function Trends() {
     setTrendArray(results);
   };
   useEffect(() => {
-    Trends(); //bo awa lera bangy dakaynawa bo away lagal har goranek rune Trends() bkatawa;
+    setTimeout(() => {
+      Trends(); //bo awa lera bangy dakaynawa bo away lagal har goranek rune Trends() bkatawa;
+    }, 100);
   }, [input]); //Empty Array to Run our Function inside the useEffect.
 
   const TrendTitle = (trend) => {
