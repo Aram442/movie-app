@@ -20,7 +20,7 @@ function NavBar() {
       <Fragment>
         <nav className={toggle ? "" : "navBarColor"}>
           <div className="nav-options">
-            <h1 id={toggle ? " " : "heading"}>REACTFLIX</h1>
+            <h1 id={toggle ? " " : "heading"}>KURD FLIX</h1>
             <NavLink
               to=""
               style={({ isActive }) => {
