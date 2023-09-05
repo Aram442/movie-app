@@ -7,17 +7,19 @@ import axios from "axios";
 
 function TvShows() {
   const { toggle, inputValue } = useContext(Container);
+  const input = inputValue;
   const [showData, setShowData] = useState([]);
   const [trailer, setTrailer] = useState(true);
+  const Shown = input ? "search" : "discover";
   const [title, setTitle] = useState("");
-  const Api = " https://api.themoviedb.org/3/discover/tv";
+  const Api = `https://api.themoviedb.org/3/${Shown}/tv`;
   const Images = "https://image.tmdb.org/t/p/w500/";
 
   const TvShows = async () => {
     const data = await axios.get(Api, {
       params: {
         api_key: "0f898ec93930a149724e4e4c3c310af8",
-        // query: input,
+        query: input,
       },
     });
     // To know our API key work or not .. console.log(data.data.results);
@@ -27,8 +29,10 @@ function TvShows() {
   };
 
   useEffect(() => {
-    TvShows();
-  }, []); // Update by (every input) if Empty parameter to Run once the MovieCall function, to optimize the penformance ...
+    setTimeout(() => {
+      TvShows(); //we call TvShows() in useEffect in order to Call Tvshow by Each Rendering the our website
+    }, 100);
+  }, [input]); // Update by (every input) if Empty parameter to Run once the MovieCall function, to optimize the penformance ...
   // console.log(showData)
 
   const TvShowTitle = (shows) => {
