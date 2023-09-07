@@ -57,7 +57,7 @@ function NavBar() {
           <div className="input-group">
             <input
               type="text"
-              placeholder="Search Whatever you want"
+              placeholder="Search whatever you want"
               onChange={(e) => setInputValue(e.target.value)}
             />
             <AiOutlineSearch fontSize={21} color="green" id="search" />
