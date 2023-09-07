@@ -38,6 +38,7 @@ const Movies = () => {
   const MoviesTitle = (movie) => {
     setMovieTitle(movie.title);
     setTrailer(!trailer);
+    
   };
   return (
     <Fragment>
