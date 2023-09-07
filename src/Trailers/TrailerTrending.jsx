@@ -40,8 +40,8 @@ function TrailerTreding({ TrendingTitle, toggle }) {
         <ReactPlayer
           url={videoURL}
           controls={true}
-          width={"1000px"}
-          height={"700px"}
+          width={"800px"}
+          height={"500px"}
           muted={false}
         />
       </div>
