@@ -1,4 +1,4 @@
-import React, { Fragment, Suspense, useState } from "react";
+import React, { Fragment, useState } from "react";
 import "../Styles/NavBar.css";
 import { Routes, Route, NavLink } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";

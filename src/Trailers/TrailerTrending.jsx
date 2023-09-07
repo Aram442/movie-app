@@ -8,11 +8,23 @@ function TrailerTreding({ TrendingTitle, toggle }) {
   const [videoURL, setVideoURL] = useState("");
 
   function handleSearch() {
-    setVideo(TrendingTitle);
-    movieTrailer(video).then((res) => {
-      setVideoURL(res);
-    });
+    try {
+      if (TrendingTitle && typeof TrendingTitle === 'string') {
+        setVideo(TrendingTitle);
+        movieTrailer(video).then((res) => {
+          setVideoURL(res);
+        });
+      } else {
+        // Handle the case when TrendingTitle is not a valid string
+        console.error("Invalid TrendingTitle:", TrendingTitle);
+        // You can set a default URL or show an error message here.
+      }
+    } catch (error) {
+      console.error("An error occurred:", error);
+      // Handle other potential errors.
+    }
   }
+  
 
   useEffect(() => {
     handleSearch();

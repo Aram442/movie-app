@@ -33,7 +33,7 @@ const Movies = () => {
       MovieCall();
     }, 100);
   }, [input]); // Update by (every input) if Empty parameter to Run once the MovieCall function, to optimize the penformance ...
-  console.log(moviesData);
+  // console.log(moviesData);
 
   const MoviesTitle = (movie) => {
     setMovieTitle(movie.title);

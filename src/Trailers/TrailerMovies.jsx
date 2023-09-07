@@ -8,16 +8,22 @@ function TrailerMovies({ movieTitle, toggle }) {
   const [videoURL, setVideoURL] = useState("");
 
   function handleSearch() {
-    setVideo(movieTitle);
-    movieTrailer(video).then((res) => {
-      setVideoURL(res);
-    });
+    try {
+      setVideo(movieTitle);
+      movieTrailer(video).then((res) => {
+        setVideoURL(res);
+      });
+    } catch (error) {
+      console.error("An error occurred:", error);
+      // Handle the error (e.g., set a default URL or show an error message).
+    }
   }
+  
 
   useEffect(() => {
     handleSearch();
   }, [videoURL]);
-
+  console.log(video);
   return (
     <Fragment>
       <div className="Container"></div>
@@ -32,7 +38,7 @@ function TrailerMovies({ movieTitle, toggle }) {
           height={"700px"}
           muted={false}
         />
-      </div>
+      </div>  
     </Fragment>
   );
 }
