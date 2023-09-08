@@ -21,6 +21,7 @@ function NavBar() {
         <nav className={toggle ? "" : "navBarColor"}>
           <div className="nav-options">
             <h1 id={toggle ? " " : "heading"}>KURD FLIX</h1>
+            <div className="nav-options ">
             <NavLink
               to=""
               style={({ isActive }) => {
@@ -37,7 +38,7 @@ function NavBar() {
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>TV Show</span>
             </NavLink>
-            <NavLink
+            <NavLink 
               to="/Trends"
               style={({ isActive }) => {
                 return { color: isActive ? "#fff" : "#ee9b00" };
@@ -53,12 +54,14 @@ function NavBar() {
             >
               <span id={toggle ? "Movies" : "MoviesLight"}>Pricing</span>
             </NavLink>
+            </div>
           </div>
           <div className="input-group">
-            <input
+            <input 
               type="text"
               placeholder="Search whatever you want"
               onChange={(e) => setInputValue(e.target.value)}
+              className="input-placeholder custom-placeholder"
             />
             <AiOutlineSearch fontSize={21} color="green" id="search" />
             <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
@@ -78,6 +81,7 @@ function NavBar() {
       </Fragment>
     </Container.Provider>
   );
+ 
 }
 
 export default NavBar;

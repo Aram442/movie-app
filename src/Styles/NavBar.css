@@ -6,7 +6,7 @@ nav {
   background-color: #001219;
   align-items: center;
   position: sticky;
-  top: 0 ;
+  top: 0;
   z-index: 101;
 }
 nav h1 {
@@ -111,3 +111,91 @@ span #HomeLight:hover,
   margin-left: 310px;
 }
 
+/* ####################################################################### */
+
+@media screen and (max-width: 767px) {
+  /* Media query for screens 767px and below */
+
+  nav {
+    display: block;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px 0.7rem; /* Add some spacing for readability */
+    position: sticky;
+    top: 0;
+  }
+
+  nav h1 {
+    margin: 20px 10px;
+    font-size: 0.9rem;
+  }
+
+  nav span {
+    margin: 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .nav-options {
+    flex-direction: row;
+    flex: 1 1 6rem;
+    justify-content: center;
+  }
+
+  .nav-options.active {
+    display: flex; /* Show the navigation options when active */
+  }
+
+  #Color-switcher {
+    position: relative;
+    margin-right: 40px;
+    background-color: #413e44;
+    width: 60px;
+    height: 20px;
+    border-radius: 20px;
+  }
+  #Color-switcher-mover {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    background-color: #fff;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transition: 0.6s;
+  }
+  #Color-switcher-moved {
+    position: absolute;
+    background-color: #fff;
+    left: 40px;
+    top: 3px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    transition: 0.6s;
+  }
+
+  .input-group {
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .input-group input {
+    width: 60%;
+    height: 1rem;
+    margin-left: 2rem;
+  }
+
+  .custom-placeholder::placeholder {
+    font-size: 12px;
+    font-weight: lighter;
+    color: black; 
+    padding-left: 1rem;
+  }
+
+  #search {
+    /* position: static; */
+    margin: 0px 0px 0px 2.2rem;
+    font-size: 1.2rem;
+  }
+}

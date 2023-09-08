@@ -31,14 +31,16 @@ function TrailerMovies({ movieTitle, toggle }) {
         <h1 id={toggle ? "TrailerMovie-name-dark" : "TrailerMovie-name-light"}>
           {movieTitle}
         </h1>
-        <ReactPlayer
+        <div className="player-container">
+        <ReactPlayer 
           url={videoURL}
           controls={true}
-          width={"800px"}
-          height={"500px"}
+          width={"50rem"}
+          height={"31rem"}
           muted={false}
         />
-      </div>  
+      </div> 
+      </div>
     </Fragment>
   );
 }
