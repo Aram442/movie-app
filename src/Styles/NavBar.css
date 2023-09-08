@@ -184,13 +184,21 @@ span #HomeLight:hover,
     width: 60%;
     height: 1rem;
     margin-left: 2rem;
+    font-size: 12px;
   }
 
   .custom-placeholder::placeholder {
     font-size: 12px;
     font-weight: lighter;
-    color: black; 
+    color: black;
     padding-left: 1rem;
+  }
+
+  input[type="text"].custom-placeholder {
+    font-size: 12px; /* to Change input font size when Search for something */
+    font-weight: lighter;
+    color: black;
+    padding-left: 2rem;
   }
 
   #search {

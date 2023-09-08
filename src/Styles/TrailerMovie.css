@@ -39,10 +39,4 @@
     font-size: 1.5rem; /* Reduce font size for smaller screens */
     top: -60px; /* Adjust position for smaller screens */
   }
-  .player-container {
-    width: 50%; /* Set the container width to 100% */
-    max-width: 20px; /* Set a maximum width for the player */
-    max-height: 20px;
-    
-  }
 }

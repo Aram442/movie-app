@@ -44,6 +44,7 @@ function Pricing() {
               <FcCheckmark fontSize={25} id="checkmark" />
               First month completely free
             </span>
+        
             <button id="button1">Buy Now</button>
             <div id="darktheme">
               <div
@@ -66,6 +67,7 @@ function Pricing() {
                 ></div>
               </div>
             </div>
+
           </div>
 
           {/* ######################################################################################### */}

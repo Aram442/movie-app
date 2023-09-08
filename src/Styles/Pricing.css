@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .backgroun-Color-secondary {
   width: 100vw;
@@ -17,6 +18,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 .Pricing-container {
   display: flex;
@@ -54,7 +56,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
- 
 }
 .light-Theme1 h3,
 .light-Theme2 h3,
@@ -162,4 +163,110 @@ button:hover {
   height: 25px;
   border-radius: 50%;
   transition: 0.6s;
+}
+
+/* Responsive styles for mobile devices ########################################### */
+@media (max-width: 768px) {
+  .backgroun-Color-Main,
+  .backgroun-Color-secondary {
+    height: auto;
+    padding-top: 1.2rem;
+  }
+
+  .Pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .Pricing-option1,
+  .Pricing-option2,
+  .Pricing-option3,
+  .light-Theme1,
+  .light-Theme2,
+  .light-Theme3 {
+    width: 90%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .Pricing-option1 h3,
+  .Pricing-option2 h3,
+  .Pricing-option3 h3,
+  .light-Theme1 h3,
+  .light-Theme2 h3,
+  .light-Theme3 h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .Pricing-option1 h2,
+  .Pricing-option2 h2,
+  .Pricing-option3 h2,
+  .light-Theme1 h2,
+  .light-Theme2 h2,
+  .light-Theme3 h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .Pricing-option1 span,
+  .Pricing-option2 span,
+  .Pricing-option3 span,
+  .light-Theme1 span,
+  .light-Theme2 span,
+  .light-Theme3 span {
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  #button1 {
+    margin: 0 0 0.5rem 1rem;
+  }
+  #button2 {
+    margin: 0 0 0.5rem 1rem;
+  }
+  #button3 {
+    margin: 0 0 0.5rem 1rem;
+  }
+  button {
+    width: 90%;
+    font-size: 1.3rem;
+  }
+
+  #darktheme {
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .Pricing-yearly-darktheme {
+    margin: 0;
+  }
+  .Pricing-yearly-darktheme {
+    position: relative;
+    width: 70px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #413e44;
+    margin-right: 10px;
+  }
+  .Pricing-monthly-darktheme {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    background-color: #fff;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.6s;
+  }
+  .Pricing-monthly-light {
+    position: absolute;
+    background-color: #fff;
+    left: 40px;
+    top: 3px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    transition: 0.6s;
+  }
 }

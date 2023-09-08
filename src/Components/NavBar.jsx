@@ -61,7 +61,7 @@ function NavBar() {
               type="text"
               placeholder="Search whatever you want"
               onChange={(e) => setInputValue(e.target.value)}
-              className="input-placeholder custom-placeholder"
+              className="input-font custom-placeholder"
             />
             <AiOutlineSearch fontSize={21} color="green" id="search" />
             <div id="Color-switcher" onClick={() => setToggle(!toggle)}>
@@ -71,7 +71,6 @@ function NavBar() {
             </div>
           </div>
         </nav>
-
         <Routes>
           <Route path="" element={<Movies />} />
           <Route path="TvShows" element={<TvShows />} />
