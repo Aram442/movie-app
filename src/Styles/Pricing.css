@@ -184,7 +184,7 @@ button:hover {
   .light-Theme1,
   .light-Theme2,
   .light-Theme3 {
-    width: 90%;
+    width: 100%;
     height: auto;
     margin-right: 0;
     margin-bottom: 20px;
@@ -197,7 +197,8 @@ button:hover {
   .light-Theme2 h3,
   .light-Theme3 h3 {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin: 0.5rem;
   }
 
   .Pricing-option1 h2,
@@ -207,7 +208,8 @@ button:hover {
   .light-Theme2 h2,
   .light-Theme3 h2 {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    margin: 0.5;
   }
 
   .Pricing-option1 span,
@@ -216,21 +218,26 @@ button:hover {
   .light-Theme1 span,
   .light-Theme2 span,
   .light-Theme3 span {
-    margin-left: 0.5rem;
-    margin-top: 0.5rem;
+    margin: 0.5rem;
+    font-size: 0.8rem;
+  }
+  #MonthlyYearly {
+    font-size: 1.2rem;
+    margin: 0px;
   }
   #button1 {
-    margin: 0 0 0.5rem 1rem;
+    margin: 0.5rem 0 0.5rem 3.2rem;
   }
   #button2 {
-    margin: 0 0 0.5rem 1rem;
+    margin: 0.5rem 0 0.5rem 3.2rem;
   }
   #button3 {
-    margin: 0 0 0.5rem 1rem;
+    margin: 0.5rem 0 0.5rem 3.2rem;
   }
   button {
-    width: 90%;
-    font-size: 1.3rem;
+    width: 60%;
+    height: 30px;
+    font-size: 1rem;
   }
 
   #darktheme {
@@ -238,34 +245,38 @@ button:hover {
     margin-bottom: 0.5rem;
   }
 
-  .Pricing-yearly-darktheme {
-    margin: 0;
+  #checkmark {
+    margin-right: 0.5rem;
+    font-size: 20px;
   }
+
   .Pricing-yearly-darktheme {
+    margin: 0px;
+    margin-right: 3rem;
     position: relative;
-    width: 70px;
-    height: 30px;
+    width: 60px;
+    height: 20px;
     border-radius: 20px;
     background-color: #413e44;
     margin-right: 10px;
   }
   .Pricing-monthly-darktheme {
     position: absolute;
-    left: 5px;
-    top: 3px;
+    left: 1px;
+    top: 1.7px;
     background-color: #fff;
-    width: 25px;
-    height: 25px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     transition: 0.6s;
   }
   .Pricing-monthly-light {
     position: absolute;
     background-color: #fff;
-    left: 40px;
-    top: 3px;
-    width: 25px;
-    height: 25px;
+    left: 43px;
+    top: 2px;
+    width: 1rem;
+    height: 1rem;
     border-radius: 50%;
     transition: 0.6s;
   }
