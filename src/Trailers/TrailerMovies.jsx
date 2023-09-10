@@ -18,7 +18,6 @@ function TrailerMovies({ movieTitle, toggle }) {
       // Handle the error (e.g., set a default URL or show an error message).
     }
   }
-  
 
   useEffect(() => {
     handleSearch();
@@ -31,15 +30,14 @@ function TrailerMovies({ movieTitle, toggle }) {
         <h1 id={toggle ? "TrailerMovie-name-dark" : "TrailerMovie-name-light"}>
           {movieTitle}
         </h1>
-        <div className="player-container">
-        <ReactPlayer 
+        <ReactPlayer
+          id="react-player"
           url={videoURL}
           controls={true}
           width={"50rem"}
           height={"31rem"}
           muted={false}
         />
-      </div> 
       </div>
     </Fragment>
   );

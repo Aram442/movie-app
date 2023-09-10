@@ -44,7 +44,7 @@ function NavBar() {
                 return { color: isActive ? "#fff" : "#ee9b00" };
               }}
             >
-              <span id={toggle ? "Movies" : "MoviesLight"}>Trendings</span>
+              <span id={toggle ? "Movies" : "MoviesLight"}>Trends</span>
             </NavLink>
             <NavLink
               to="/Pricing"
@@ -52,7 +52,7 @@ function NavBar() {
                 return { color: isActive ? "#fff" : "#ee9b00" };
               }}
             >
-              <span id={toggle ? "Movies" : "MoviesLight"}>Pricing</span>
+              <span id={toggle ? "Movies" : "MoviesLight"}>Prices</span>
             </NavLink>
             </div>
           </div>

@@ -70,6 +70,7 @@ body {
   margin-left: 800px;
   margin-top: 67px;
   z-index: 999;
+  font-size: 35px;
 }
 #Nothing {
   color: green;
@@ -87,47 +88,52 @@ body {
 /* Mobile-responsive styles ############################################################# */
 
 @media (max-width: 768px) {
- 
-
   .mainColor,
   .secondaryColor {
     font-size: 0.9rem; /* Reduce font size for smaller screens */
   }
-}
 
-.mainBgColor {
-  background-color: #0c1e25;
-  width: 100%;
-}
+  .mainBgColor {
+    background-color: #0c1e25;
+    width: 100%;
+  }
 
-.secondaryBgColor {
-  background-color: #fff;
-  width: 100%;
-}
+  .secondaryBgColor {
+    background-color: #fff;
+    width: 100%;
+  }
 
-.movies-container img {
-  /* Keep your existing styles for larger screens */
-  width: 18rem;
-  height: 31rem;
-  margin: 25px 0px 4px 15px;
-  border-radius: 18px;
-}
+  .movies-container img {
+    /* Keep your existing styles for larger screens */
+    width: 18rem;
+    height: 31rem;
+    margin: 25px 0px 4px 15px;
+    border-radius: 18px;
+  }
 
-.mainColor {
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  font-size: 1rem;
-}
+  .mainColor {
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
 
-#Nothing {
-  display: none;
-}
+  #Nothing {
+    display: none;
+  }
 
-.secondaryColor {
-  color: #ff206e;
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  font-size: 1rem;
+  .secondaryColor {
+    color: #ff206e;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  #Exit1 {
+    position: absolute;
+    margin-left: 69%;
+    margin-top: 10%;
+    z-index: 999;
+    font-size: 25px;
+  }
 }

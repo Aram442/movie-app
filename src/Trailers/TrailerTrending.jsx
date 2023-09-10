@@ -9,7 +9,7 @@ function TrailerTreding({ TrendingTitle, toggle }) {
 
   function handleSearch() {
     try {
-      if (TrendingTitle && typeof TrendingTitle === 'string') {
+      if (TrendingTitle && typeof TrendingTitle === "string") {
         setVideo(TrendingTitle);
         movieTrailer(video).then((res) => {
           setVideoURL(res);
@@ -24,7 +24,6 @@ function TrailerTreding({ TrendingTitle, toggle }) {
       // Handle other potential errors.
     }
   }
-  
 
   useEffect(() => {
     handleSearch();
@@ -38,10 +37,11 @@ function TrailerTreding({ TrendingTitle, toggle }) {
           {TrendingTitle}
         </h1>
         <ReactPlayer
+          id="react-player"
           url={videoURL}
           controls={true}
-          width={"800px"}
-          height={"500px"}
+          width={"50rem"}
+          height={"31rem"}
           muted={false}
         />
       </div>
