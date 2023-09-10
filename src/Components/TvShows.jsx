@@ -7,6 +7,7 @@ import axios from "axios";
 import TrailerTvShows from "../Trailers/TrailerTvShows";
 
 function TvShows() {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const { toggle, inputValue } = useContext(Container);
   const input = inputValue;
   const [showData, setShowData] = useState([]);
@@ -19,7 +20,7 @@ function TvShows() {
   const TvShows = async () => {
     const data = await axios.get(Api, {
       params: {
-        api_key: "0f898ec93930a149724e4e4c3c310af8",
+        api_key: apiKey,
         query: input,
       },
     });

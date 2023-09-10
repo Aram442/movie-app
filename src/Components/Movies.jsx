@@ -8,6 +8,7 @@ import { Container } from "./NavBar";
 import TrailerMovies from "../Trailers/TrailerMovies";
 
 const Movies = () => {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const { toggle, inputValue } = useContext(Container);
   const input = inputValue;
   const [moviesData, setMoviesData] = useState([]);
@@ -17,10 +18,12 @@ const Movies = () => {
   const Api = `https://api.themoviedb.org/3/${Shown}/movie`;
   const Images = "https://image.tmdb.org/t/p/w500/";
 
+ 
+
   const MovieCall = async () => {
     const data = await axios.get(Api, {
       params: {
-        api_key: "0f898ec93930a149724e4e4c3c310af8",
+        api_key: apiKey,
         query: input,
       },
     });
@@ -38,7 +41,6 @@ const Movies = () => {
   const MoviesTitle = (movie) => {
     setMovieTitle(movie.title);
     setTrailer(!trailer);
-    
   };
   return (
     <Fragment>
@@ -81,7 +83,11 @@ const Movies = () => {
             cursor={"pointer"}
             onClick={(trailer) => setTrailer(true)}
           />
-          {trailer ? console.log : <TrailerMovies movieTitle={movieTitle} toggle={toggle}/>}
+          {trailer ? (
+            console.log
+          ) : (
+            <TrailerMovies movieTitle={movieTitle} toggle={toggle} />
+          )}
         </div>
       </div>
     </Fragment>

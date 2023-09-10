@@ -6,6 +6,7 @@ import noImage from "./no-image.jpg";
 import TrailerTreding from "../Trailers/TrailerTrending";
 
 function Trends() {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const Api = "https://api.themoviedb.org/3";
   const TrendsShown = "/trending/all/week";
   const Images = "https://image.tmdb.org/t/p/w500/";
@@ -18,7 +19,7 @@ function Trends() {
   const Trends = async () => {
     const data = await axios.get(`${Api}${TrendsShown}`, {
       params: {
-        api_key: "0f898ec93930a149724e4e4c3c310af8",
+        api_key: apiKey,
         query: input,
       },
     });
